@@ -1,7 +1,15 @@
 import React from 'react';
 import './TaskCard.css';
 
-const TaskCard = (props) => {
+interface TaskCard1 {
+  title: string;
+  dueDate?: string;
+  completedAtDate?: string;
+  assigneeName: string;
+  flag: 'p' | 'd';
+}
+
+const TaskCard = (props: TaskCard1) => {
   const { flag } = props;
 
   return (
