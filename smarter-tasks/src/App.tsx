@@ -6,6 +6,6 @@ function App() {
       <TaskApp />
     </div>
   );
-}  
+}
 
 export default App;
