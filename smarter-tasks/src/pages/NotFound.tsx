@@ -6,7 +6,7 @@ const NotFound: React.FC = () => {
       <p className="text-3xl text-gray-600">404 Page Not Found</p>
       <br />
       <a
-        href="/home"
+        href="/home" id="backToHomeButton"
         className="ml-6 text-lg hover:text-gray-300 bg-black rounded-lg px-4 py-2 text-white"
       >
         Home
