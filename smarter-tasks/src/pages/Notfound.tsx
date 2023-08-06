@@ -1,17 +1,19 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
-const NotFound: React.FC = () => {
+const Notfound: React.FC = () => {
+    const navigate = useNavigate();
+    const ButtonClick = () => {
+        navigate("/home");
+      };
   return (
     <div className="flex flex-col justify-center items-center h-screen">
       <p className="text-3xl text-gray-600">404 Page Not Found</p>
       <br />
-      <a
-        href="/home"
-        className="ml-6 text-lg hover:text-gray-300 bg-black rounded-lg px-4 py-2 text-white"
-      >
+      <button id="backToHomeButton" onClick={ButtonClick} className="bg-black text-white">
         Home
-      </a>
+      </button>
     </div>
   );
 };
-export default NotFound;
+export default Notfound;
