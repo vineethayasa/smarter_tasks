@@ -11,6 +11,9 @@ interface Props {
 // interface State {}
 
 const TaskList = (props: Props) => {
+  const handleDeleteTask = (index: number) => {
+    props.deleteTask(index);
+  };
   const list = props.tasks.map((task, idx) => (
     <li>
       <Task
@@ -18,7 +21,7 @@ const TaskList = (props: Props) => {
       title={task.title}
       description={task.description}
       dueDate={task.dueDate}
-      deleteTask={props.deleteTask}
+      deleteTask={() => handleDeleteTask(idx)} 
     />
     </li>
   ));
