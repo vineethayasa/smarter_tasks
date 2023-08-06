@@ -11,7 +11,7 @@ interface TaskAppState {
   tasks: TaskItem[];
 }
 
-const TaskApp = (props: TaskAppProp) => {
+const TaskApp = (_props: TaskAppProp) => {
   const [taskAppState, setTaskAppState] = useLocalStorage<TaskAppState>("tasks", {
     tasks: [],
   });  
