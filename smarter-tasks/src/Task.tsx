@@ -1,13 +1,13 @@
-import React from "react";
+// import React from "react";
 import "./TaskCard.css";
-import { TaskItem } from "./types";
+// import { TaskItem } from "./types";
 
 interface TaskProp {
   key:number;
   title: string;
   description: string;
   dueDate: string;
-  deleteTask: (task: TaskItem) => void;
+  deleteTask: (index: number) => void;
 }
 
 const Task = (props: TaskProp) => {

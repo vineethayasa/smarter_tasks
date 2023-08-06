@@ -1,14 +1,14 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import React from "react";
+// import React from "react";
 import Task from "./Task";
 import { TaskItem } from "./types";
 
 interface Props {
   tasks: TaskItem[];
-  deleteTask: (task: TaskItem) => void;
+  deleteTask: (index: number) => void;
 }
 
-interface State {}
+// interface State {}
 
 const TaskList = (props: Props) => {
   const list = props.tasks.map((task, idx) => (
