@@ -21,7 +21,7 @@ const router = createBrowserRouter([
     element: <Signin />,
   },
   {
-    path: "notfound",
+    path: "/notfound",
     element: <NotFound />,
   },
   {
@@ -36,15 +36,15 @@ const router = createBrowserRouter([
     ),
     children: [
       {
-        path: "home",
+        path: "/home",
         element: <HomePage />,
       },
       {
-        path: "tasks",
+        path: "/tasks",
         element: <TaskListPage />,
       },
       {
-        path: "tasks/:title/:description/:dueDate",
+        path: "/tasks/:title/:description/:dueDate",
         element: <TaskDetailsPage />,
       },
     ],
