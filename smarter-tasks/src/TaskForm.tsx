@@ -1,4 +1,3 @@
-
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import React from "react";
 import { TaskItem } from "./types";
@@ -24,12 +23,14 @@ const TaskForm = (props: TaskFormProps) => {
     setFormState({ ...formState, title: event.target.value });
   };
   const descriptionChanged: React.ChangeEventHandler<HTMLInputElement> = (
-    event
+    event,
   ) => {
     console.log(`${event.target.value}`);
     setFormState({ ...formState, description: event.target.value });
   };
-  const dueDateChanged: React.ChangeEventHandler<HTMLInputElement> = (event) => {
+  const dueDateChanged: React.ChangeEventHandler<HTMLInputElement> = (
+    event,
+  ) => {
     console.log(`${event.target.value}`);
     setFormState({ ...formState, dueDate: event.target.value });
   };

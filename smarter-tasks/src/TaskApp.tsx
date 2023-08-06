@@ -12,9 +12,12 @@ interface TaskAppState {
 }
 
 const TaskApp = (_props: TaskAppProp) => {
-  const [taskAppState, setTaskAppState] = useLocalStorage<TaskAppState>("tasks", {
-    tasks: [],
-  });  
+  const [taskAppState, setTaskAppState] = useLocalStorage<TaskAppState>(
+    "tasks",
+    {
+      tasks: [],
+    },
+  );
 
   const deleteTask = (index: number) => {
     const updatedTasks = [...taskAppState.tasks];
@@ -25,12 +28,10 @@ const TaskApp = (_props: TaskAppProp) => {
   const addTask = (task: TaskItem) => {
     setTaskAppState({ tasks: [...taskAppState.tasks, task] });
   };
-  
+
   return (
     <div className="container py-10 max-w-4xl mx-auto">
-      <h1 className="text-3xl mb-2 font-bold text-slate-700">
-        Smarter Tasks
-      </h1>
+      <h1 className="text-3xl mb-2 font-bold text-slate-700">Smarter Tasks</h1>
       <h1 className="text-lg mb-6 text-slate-600">
         <span className="font-bold">Project: </span>
         Graduation Final Year Project (Revamp college website)
