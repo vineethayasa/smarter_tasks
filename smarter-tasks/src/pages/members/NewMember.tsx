@@ -11,7 +11,7 @@ type Inputs = {
   password: string;
 };
 
-const NewUser = () => {
+const NewMember = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [error, setError] = useState(null);
 
@@ -138,4 +138,4 @@ const NewUser = () => {
   );
 };
 
-export default NewUser;
+export default NewMember;
