@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 const Notfound: React.FC = () => {
   const navigate = useNavigate();
   const ButtonClick = () => {
-    navigate("/home");
+    navigate("/account");
   };
   return (
     <div className="flex flex-col justify-center items-center h-screen">
@@ -13,7 +13,7 @@ const Notfound: React.FC = () => {
       <button
         id="backToHomeButton"
         onClick={ButtonClick}
-        className="bg-black text-white"
+        className="inline-flex justify-center rounded-md border border-transparent bg-gray-600 px-4 py-2 mr-2 text-sm font-medium text-white"
       >
         Home
       </button>
