@@ -41,7 +41,7 @@ export const addUser = async (dispatch: any, args: any) => {
     if (data.errors && data.errors.length > 0) {
       return { ok: false, error: data.errors[0].message };
     }
-    dispatch({ type: "ADD_USER_SUCCESS", payload: data });
+    dispatch({ type: "ADD_USER_SUCCESS", payload: data.user });
     return { ok: true };
   } catch (error) {
     console.error("Operation failed:", error);
@@ -49,7 +49,7 @@ export const addUser = async (dispatch: any, args: any) => {
   }
 };
 
-export const deleteUser = async (dispatch: any, userId: string) => {
+export const deleteUser = async (dispatch: any, userId: number) => {
   try {
     const token = localStorage.getItem("authToken") ?? "";
     const response = await fetch(`${API_ENDPOINT}/users/${userId}`, {
@@ -70,7 +70,7 @@ export const deleteUser = async (dispatch: any, userId: string) => {
       return { ok: false, error: data.errors[0].message };
     }
 
-    dispatch({ type: "DELETE_USER_SUCCESS", payload: data });
+    dispatch({ type: "DELETE_USER_SUCCESS", payload: userId });
     return { ok: true };
   } catch (error) {
     console.error("Operation failed:", error);

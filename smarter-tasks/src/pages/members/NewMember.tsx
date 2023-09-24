@@ -32,7 +32,7 @@ const NewMember = () => {
     const { name, email, password } = data;
     const response = await addUser(dispatchUsers, { name, email, password });
     if (response.ok) {
-      window.location.reload();
+      // window.location.reload();
       setIsOpen(false);
     } else {
       setError(response.error as React.SetStateAction<null>);

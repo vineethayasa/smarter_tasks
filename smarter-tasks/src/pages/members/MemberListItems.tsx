@@ -18,9 +18,9 @@ export default function MemberListItems() {
     return <span>{errorMessage}</span>;
   }
   const dispatchUsers = useUsersDispatch();
-  const handleDelete = (userId: string) => {
+  const handleDelete = (userId: number) => {
     deleteUser(dispatchUsers, userId);
-    window.location.reload();
+    // window.location.reload();
   };
   return (
     <>
