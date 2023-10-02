@@ -4,7 +4,7 @@ import router from "./routes";
 import { ThemeContext } from "./context/theme";
 import { ProjectsProvider } from "./context/projects/context";
 import { UsersProvider } from "./context/members/context";
-
+import { CommentProvider } from "./context/comment/context";
 const App = () => {
   const { theme } = useContext(ThemeContext);
   return (
@@ -13,11 +13,13 @@ const App = () => {
         theme === "dark" ? "dark" : ""
       }`}
     >
-      <UsersProvider>
-        <ProjectsProvider>
-          <RouterProvider router={router} />
-        </ProjectsProvider>
-      </UsersProvider>
+      <ProjectsProvider>
+        <UsersProvider>
+          <CommentProvider>
+            <RouterProvider router={router} />
+          </CommentProvider>
+        </UsersProvider>
+      </ProjectsProvider>
     </div>
   );
 };
