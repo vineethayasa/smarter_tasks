@@ -47,6 +47,10 @@ const SignupForm: React.FC = () => {
     }
   };
 
+  const goToSignin = () => {
+    navigate("/signin");
+  };
+
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <div>
@@ -100,6 +104,12 @@ const SignupForm: React.FC = () => {
         />
         {errors.userPassword && <span>This field is required</span>}
       </div>
+      <p className="mt-2 text-gray-800 text-l">
+        Already have an account ?{" "}
+        <span onClick={goToSignin} className="text-blue-700 cursor-pointer" >
+          Log in
+        </span>
+      </p>
       <button
         type="submit"
         className="w-full bg-gray-700 hover:bg-gray-800 text-white font-semibold py-2 px-4 rounded-md focus:outline-none focus:shadow-outline-gray mt-4"
